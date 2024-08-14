@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda Online</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        .banner {
+            background: linear-gradient(90deg, #ff8a00, #e52e71);
+            color: #fff;
+            padding: 15px 30px;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .banner:hover {
+            background: linear-gradient(90deg, #e52e71, #ff8a00);
+        }
+
+        .banner-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .store-name {
+            font-size: 28px;
+            font-weight: 600;
+            margin: 0;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .store-name:hover {
+            color: #ffec99;
+        }
+
+        .cart-icon {
+            position: relative;
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .cart-icon:hover {
+            transform: scale(1.1);
+        }
+
+        .cart-icon img {
+            width: 36px;
+            height: 36px;
+        }
+
+        .cart-count {
+            background-color: #ff4757;
+            color: #fff;
+            font-size: 12px;
+            font-weight: 600;
+            padding: 2px 6px;
+            border-radius: 50%;
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        @media (max-width: 768px) {
+            .store-name {
+                font-size: 22px;
+            }
+
+            .banner {
+                padding: 10px 20px;
+            }
+
+            .cart-icon img {
+                width: 32px;
+                height: 32px;
+            }
+
+            .cart-count {
+                font-size: 10px;
+                padding: 1px 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="banner">
+        <div class="banner-content">
+            <h1 class="store-name">Mi Tienda Premium</h1>
+            <a href="carrito.php">
+                <div class="cart-icon">
+                    <img src="carrito-de-compras.png">
+                    <span class="cart-count">3</span>
+                </div>
+            </a>
+        </div>
+    </header>
+</body>
+
+</html>
